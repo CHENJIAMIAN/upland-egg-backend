@@ -47,9 +47,10 @@ class PlotController extends Controller {
   /**
    * @summary 修改地块
    * @description 获取地块信息
-   * @router put /api/plot/
+   * @router put /api/plot/{id}
+   * @request path string *id eg:1 地块ID
+   * @request body createPlotRequest *body
    * @response 200 baseResponse 创建成功
-   * @ignore
    */
   async update() {
     const { ctx, service } = this
@@ -68,7 +69,7 @@ class PlotController extends Controller {
    * @summary 获取单个地块
    * @description 获取地块信息
    * @router get /api/plot/{id}
-   * @request url baseRequest
+   * @request path string *id
    * @response 200 baseResponse 创建成功
    */
   async show() {

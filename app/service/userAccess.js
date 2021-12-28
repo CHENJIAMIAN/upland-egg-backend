@@ -30,4 +30,4 @@ class UserAccessService extends Service {
     }
 }
 
-module.exports = UserAccessService
+module.exports = UserAccessService 
